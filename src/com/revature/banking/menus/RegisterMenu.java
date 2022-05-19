@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class RegisterMenu extends Menu{
 
-
+    //creating method for user input for registration
     public RegisterMenu(BufferedReader terminalReader) {
         super("Register", "/register", terminalReader);
     }

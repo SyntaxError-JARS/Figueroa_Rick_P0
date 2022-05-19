@@ -1,18 +1,19 @@
 package com.revature.banking.menus;
 
-import com.revature.banking.services.AccountServices;
+import com.revature.banking.services.UsersServices;
 
 import java.io.BufferedReader;
 
 public class WelcomeMenu extends Menu{
 
-    private AccountServices usersServices;
+    private UsersServices usersServices;
 
-    public WelcomeMenu(BufferedReader terminalReader, AccountServices usersServices) {
+    public WelcomeMenu(BufferedReader terminalReader, UsersServices usersServices) {
       super("Welcome", "/Welcome", terminalReader);
       this.usersServices = usersServices;
     }
 
+    @Override
     public void render() throws Exception{
 
             System.out.println("This is the begining of the Banking Application");
@@ -40,6 +41,12 @@ public class WelcomeMenu extends Menu{
 
                         break;
                     case "3":
+                        System.out.println("View Users has been selected...");
+                       usersServices.readUsers();
+                        break;
+
+
+                    case "4":
                         System.out.println("User has Selected Exit...");
                         //shut down application here
                         break;
