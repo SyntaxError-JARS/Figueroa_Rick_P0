@@ -5,7 +5,7 @@ banking application
 
 User Stories
 
-As a user, I can:
+one would be sable to
 
  register a new user account with the system (must be secured with a password)
  login with my existing credentials
